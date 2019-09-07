@@ -33,7 +33,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #SECRET_KEY = 'p@^#2#_fi8&j6=wsvo0)7a0rm4e9vpis82yr)!7q65np39vw*9'
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+#ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+ALLOWED_HOSTS = ['https://django-app-jc.herokuapp.com/']
 DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
